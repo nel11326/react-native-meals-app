@@ -1,6 +1,8 @@
 import { Pressable, StyleSheet, Text, View, Platform } from "react-native";
+// import { useNavigation } from "@react-navigation/native";
 
-function CategoryGridTile({ title, color }) {
+function CategoryGridTile({ title, color, onPress }) {
+  // const navigation = useNavigation()
   return (
     <View style={styles.gridItem}>
       <Pressable
@@ -9,6 +11,7 @@ function CategoryGridTile({ title, color }) {
           styles.button,
           pressed ? styles.buttonPressed : null,
         ]}
+        onPress={onPress}
       >
         <View style={[styles.innerContainer, { backgroundColor: color }]}>
           <Text style={styles.title}>{title}</Text>
@@ -23,16 +26,16 @@ export default CategoryGridTile;
 const styles = StyleSheet.create({
   gridItem: {
     flex: 1,
-    margin: 15,
+    margin: 16,
     height: 150,
-    borderRadius: 10,
+    borderRadius: 8,
     overflow: Platform.select({ ios: "visible", android: "hidden" }),
-    elevation: 5,
+    elevation: 4,
     backgroundColor: "white",
     shadowColor: "black",
     shadowOpacity: 0.25,
     shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 10,
+    shadowRadius: 8,
   },
   button: {
     flex: 1,
@@ -42,10 +45,10 @@ const styles = StyleSheet.create({
   },
   innerContainer: {
     flex: 1,
-    padding: 15,
+    padding: 16,
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: 10,
+    borderRadius: 8,
     backgroundColor: "rgba(0,0,0,0.2)",
   },
   title: {
