@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "section-6-react-native-navigation-meals-app",
+    "name": "My Recipe Book",
     "slug": "section-6-react-native-navigation-meals-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,9 +13,11 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
+      "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
